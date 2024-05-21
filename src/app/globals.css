@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: hsl(0 3% 6%);
+  --background: hsl(50 98% 96%);
+  --secondary: hsl(0 0% 50%);
+}
+
+* {
+  @apply text-foreground;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary hover:bg-foreground bg-opacity-30 rounded-full;
+}
+
+.page {
+  @apply w-full h-full flex flex-col justify-center gap-6 items-center p-6;
+}
