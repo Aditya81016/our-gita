@@ -23,6 +23,7 @@ export default function Home() {
           Design inspired by: <br />
           <Link href={"https://devdutt.com/my-gita/"}>My Gita</Link>
         </div>
+        <Link href={"/contents"}>Contents</Link>
         <div className="text-center">
           Powered by: <br />
           <Link href={"https://github.com/gita/bhagavad-gita-api"}>
