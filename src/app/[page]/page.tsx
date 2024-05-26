@@ -28,7 +28,7 @@ export default function Page({ params: { page } }: Props) {
   return (
     <main className="flex flex-col w-screen h-screen p-6 items-center">
       <Header chapterNo={chapter.chapter_number} />
-      <div className="page max-w-md !gap-14">
+      <div className="page max-w-md !gap-14 max-h-[86vh]">
         {content === "Summary" ? (
           <>
             <div className="text-2xl font-medium text-center space-y-2">
@@ -40,7 +40,7 @@ export default function Page({ params: { page } }: Props) {
             </div>{" "}
           </>
         ) : (
-          <div className="overflow-y-auto space-y-6 px-4">
+          <div className="overflow-y-auto flex flex-col gap-6 px-4">
             {data.map((verse_number: number) => {
               const verse = Gita.getVerse({
                 chapter_number: chapter.chapter_number,
@@ -62,6 +62,12 @@ export default function Page({ params: { page } }: Props) {
             })}
           </div>
         )}
+      </div>
+      <div className="flex max-w-md w-full items-center gap-6">
+        <div className="text-sm italic w-full text-center">
+          {chapter.name_meaning}
+        </div>
+        <div className="max-sm:fixed bottom-2 right-2">{page + 1}</div>
       </div>
     </main>
   );
