@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { EB_Garamond } from "next/font/google";
 import "./globals.css";
+import RightGraphics from "@/components/right-graphics";
+import TopLoader from "@/components/top-loader";
 
 const font = EB_Garamond({ subsets: ["latin"] });
 
@@ -19,7 +21,9 @@ export default function RootLayout({
       <body
         className={`${font.className} bg-background flex flex-col w-screen h-screen`}
       >
+        <TopLoader />
         {children}
+        <RightGraphics />
       </body>
     </html>
   );

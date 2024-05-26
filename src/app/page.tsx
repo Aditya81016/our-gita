@@ -1,10 +1,12 @@
 import { Raleway, Tangerine } from "next/font/google";
 import Link from "@/components/ui/link";
-import LeftArrowIcon from "../assets/icons/left-arrow";
-import Underline from "@/components/ui/underline";
 
 const headerFont = Raleway({ subsets: ["latin"] });
-const handwriting = Tangerine({ weight: "700", subsets: ["latin"] });
+const handwriting = Tangerine({
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
   return (

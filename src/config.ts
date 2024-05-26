@@ -24,7 +24,7 @@ const contents: Array<ReturnType<typeof chapter>> = [
 
       return chapter(
         Gita.chapters[i]?.name_meaning,
-        `/${page_number}`,
+        `/page/${page_number}`,
         page_number ?? -1,
         "dot"
       );
