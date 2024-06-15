@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: hsl(0 3% 6%);
+  --background: #fffbeb;
+  --primary: #fed650;
+  --secondary: hsl(0 0% 50%);
+  --accent: #2e3f88;
+}
+
+* {
+  @apply text-foreground;
+  font-family: "EB Garamond", serif;
+}
+
+body,
+#root {
+  @apply w-screen h-[100dvh] flex overflow-x-hidden bg-background;
+}
+
+::-webkit-scrollbar {
+  @apply w-1 h-0;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary hover:bg-foreground bg-opacity-30 rounded-full;
+}
+
+.default {
+  font-family: "EB Garamond", serif;
+}
+
+.cursive {
+  font-family: "Tangerine", cursive;
+}
+
+.header {
+  font-family: "Raleway", sans-serif;
+}
+
+.perspective {
+  perspective: 3000px;
+}
+
+a {
+  @apply flex flex-col items-center hover:after:w-[120%] font-medium;
+  font-family: "Raleway", sans-serif;
+
+  &::after {
+    content: ".";
+    @apply h-px -mt-1 w-0 bg-foreground text-transparent transition-all;
+  }
+}
+
+hr {
+  @apply bg-foreground h-[2px] max-sm:h-px w-[60%];
+}
